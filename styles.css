@@ -69,7 +69,7 @@ nav {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
-.nav-logo img{
+.nav-logo {
  width:40px;
  margin-right:10px;
  vertical-align:middle;
