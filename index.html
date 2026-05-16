@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Wear — Ropa de la mejor calidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- TOAST NOTIFICACIÓN -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✔</span>
+  <span id="toast-msg">Producto añadido</span>
+</div>
+
+<!-- CARRITO PANEL -->
+<div class="carrito-panel" id="carrito-panel">
+  <div class="carrito-header">
+    <h2>Tu Carrito</h2>
+    <button id="cerrar-carrito" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <ul id="lista-carrito"></ul>
+  <div class="carrito-footer">
+    <div class="carrito-total-row">
+      <span>Total</span>
+      <span class="carrito-total-valor">$<span id="total">0</span></span>
+    </div>
+    <button class="btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+    <button class="btn-checkout">Ir a pagar →</button>
+  </div>
+</div>
+<div class="carrito-overlay" id="carrito-overlay"></div>
+
+<!-- NAVEGACIÓN -->
+<nav>
+  <a href="#" class="nav-logo">Urban Wear</a>
+  <ul class="nav-links">
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#conjuntos">Conjuntos</a></li>
+    <li><a href="#resenas">Reseñas</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="nav-search">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Buscar productos..." id="buscador" />
+    </div>
+    <button class="nav-cta" id="abrir-carrito">
+      <span class="carrito-icon">🛒</span>
+      <span id="carrito-count-badge">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-up">
+    <p class="hero-eyebrow">Nueva Colección 2026</p>
+    <h1>Moda <em>urbana</em> con estilo</h1>
+    <p class="hero-desc">
+      Descubre nuestra colección de poleras, hoodies y pantalones
+      diseñados para destacar tu estilo en cualquier lugar.
+    </p>
+    <div class="hero-btns">
+      <a href="#productos" class="btn-primary">Comprar Ahora</a>
+      <a href="#conjuntos" class="btn-outline">Ver conjuntos</a>
+    </div>
+  </div>
+  <div class="hero-visual fade-up-2">
+    <div class="hero-circle-bg"></div>
+    <div class="hero-img-frame">
+      <img src="IMG/Portada.jpg" alt="Modelo ropa urbana">
+    </div>
+  </div>
+</section>
+
+<!-- BADGES DE CONFIANZA -->
+<section class="trust-section">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <span class="trust-icon">🚚</span>
+      <div>
+        <strong>Envío gratis desde $50.000</strong>
+        <p>A todo Chile en 3–5 días hábiles</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">🔄</span>
+      <div>
+        <strong>Devoluciones gratis</strong>
+        <p>30 días para cambios sin preguntas</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">🔒</span>
+      <div>
+        <strong>Pago seguro</strong>
+        <p>Webpay, débito y crédito disponibles</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">⭐</span>
+      <div>
+        <strong>4.9 / 5 estrellas</strong>
+        <p>Más de 1.200 reseñas verificadas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="section" id="productos">
+  <div class="section-header reveal">
+    <p class="section-tag">Colección 2026</p>
+    <h2>Nuestros Productos</h2>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="filtros reveal">
+    <button class="filtro-btn active" data-filtro="todos">Todos</button>
+    <button class="filtro-btn" data-filtro="polera">Poleras</button>
+    <button class="filtro-btn" data-filtro="hoodie">Poleron</button>
+    <button class="filtro-btn" data-filtro="jeans">Pantalones</button>
+    <button class="filtro-btn" data-filtro="zapatillas">Zapatillas</button>
+  </div>
+
+  <div class="rutina-grid">
+
+    <div class="rutina-card reveal" data-categoria="polera">
+      <div class="card-icon">
+        <img src="IMG/polera.jpg" alt="Modelo ropa urbana">
+      </div>
+      <p class="card-step">Best Seller</p>
+      <h3>Polera Negra</h3>
+      <p>Polera urbana premium algodón.</p>
+      <p class="precio">$24.990</p>
+      <button class="btn-comprar">Añadir al carrito</button>
+    </div>
+
+    <div class="rutina-card reveal" data-categoria="hoodie">
+      <div class="card-icon">
+        <img src="IMG/poleron.jpg" alt="Modelo ropa urbana">
+      </div>
+      <p class="card-step">Streetwear</p>
+      <h3>Poleron Negro</h3>
+      <p>Diseño moderno y cómodo.</p>
+      <p class="precio">$39.990</p>
+      <button class="btn-comprar">Añadir al carrito</button>
+    </div>
+
+    <div class="rutina-card reveal" data-categoria="jeans">
+      <div class="card-icon">
+        <img src="IMG/jeanscargo.jpg" alt="Modelo ropa urbana">
+      </div>
+      <p class="card-step">Nuevo</p>
+      <h3>Jeans Cargo</h3>
+      <p>Pantalón cargo estilo urbano.</p>
+      <p class="precio">$34.990</p>
+      <button class="btn-comprar">Añadir al carrito</button>
+    </div>
+
+    <div class="rutina-card reveal" data-categoria="zapatillas">
+      <div class="card-icon">
+        <img src="IMG/zapatillas.webp" alt="Modelo ropa urbana">
+      </div>
+      <p class="card-step">Exclusivo</p>
+      <h3>Zapatillas</h3>
+      <p>Perfectas para cualquier outfit.</p>
+      <p class="precio">$59.990</p>
+      <button class="btn-comprar">Añadir al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONJUNTOS -->
+<section class="section seccion-conjuntos" id="conjuntos">
+  <div class="consejos-inner">
+    <div class="consejos-visual">
+      <div class="ring-center">💸</div>
+    </div>
+    <div>
+      <p class="section-tag">Conjuntos Urbanos</p>
+      <h2 class="conjuntos-titulo">Conjuntos Destacados</h2>
+
+      <div class="tip-item reveal">
+        <img src="IMG/Oufit negro.jpg" alt="Conjunto Black Street">
+        <div class="tip-content">
+          <h4>Conjunto Black Street</h4>
+          <p>Camisa Negra + Jeans Negros + zapatillas Negras.</p>
+          <p class="precio-small">$89.990 <del>$110.000</del> <span class="descuento">20%</span></p>
+          <button class="btn-comprar">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="tip-item reveal">
+        <img src="IMG/polerablenca.jpg" alt="Conjunto White Urban">
+        <div class="tip-content">
+          <h4>Conjunto White Urban</h4>
+          <p>Polera Blanca + jeans Skinny + Zapatillas Blanca.</p>
+          <p class="precio-small">$74.990 <del>$95.000</del> <span class="descuento">20%</span></p>
+          <button class="btn-comprar">Añadir al carrito</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="section" id="resenas">
+  <div class="section-header reveal">
+    <p class="section-tag">Lo que dicen nuestros clientes</p>
+    <h2>Reseñas</h2>
+  </div>
+  <div class="resenas-grid">
+    <div class="resena-card reveal">
+      <div class="resena-estrellas">★★★★★</div>
+      <p class="resena-texto">"El Poleron llegó perfecto, talla exacta y calidad increíble. Definitivamente volvería a comprar."</p>
+      <div class="resena-autor">
+        <div class="resena-avatar">CR</div>
+        <div>
+          <strong>Camila R.</strong>
+          <p>Santiago</p>
+        </div>
+      </div>
+    </div>
+    <div class="resena-card reveal">
+      <div class="resena-estrellas">★★★★★</div>
+      <p class="resena-texto">"El conjunto black street es lo más. Lo uso para todo, desde salir a andar hasta juntarme con amigos."</p>
+      <div class="resena-autor">
+        <div class="resena-avatar">DM</div>
+        <div>
+          <strong>Diego M.</strong>
+          <p>Valparaíso</p>
+        </div>
+      </div>
+    </div>
+    <div class="resena-card reveal">
+      <div class="resena-estrellas">★★★★☆</div>
+      <p class="resena-texto">"Envío súper rápido y bien embalado. Los jeans cargo quedaron perfectos, muy buena calidad."</p>
+      <div class="resena-autor">
+        <div class="resena-avatar">VS</div>
+        <div>
+          <strong>Valentina S.</strong>
+          <p>Concepción</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="cta-section" id="newsletter">
+  <h2>Únete a Urban Wear</h2>
+  <p>Obtén un 10% de descuento en tu primera compra y accede a preventas exclusivas.</p>
+  <div class="newsletter">
+    <input type="email" placeholder="tu@correo.com" />
+    <button type="button">Obtener Descuento</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Urban Wear</div>
+  <p>© 2026 Urban Wear · Envíos a todo el país</p>
+</footer>
+
+<script src="carrito.js"></script>
+</body>
+</html>
