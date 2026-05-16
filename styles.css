@@ -70,9 +70,9 @@ nav {
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
 .nav-logo {
- width:40px;
- margin-right:10px;
- vertical-align:middle;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 300; letter-spacing: .12em;
+  color: var(--tierra-oscura); text-decoration: none;
 }
 .nav-links {
   display: flex; gap: 2.4rem; list-style: none;
